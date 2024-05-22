@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Isogram_Validator
 {
-    internal class Isogram_Validator
+    class IsogramValidator
     {
-        string RemoveDuplicates(string text)
+       public string RemoveDuplicates(string text)
         {
-            HashSet<char> uniqueChars = new HashSet<char>();
+            List<char> uniqueChars = new List<char>();
             StringBuilder stringBuilder = new StringBuilder();
 
             foreach (char c in text.ToLower())
@@ -23,7 +23,7 @@ namespace Isogram_Validator
             }
 
             return stringBuilder.ToString();
-        }
 
+        }
     }
 }
